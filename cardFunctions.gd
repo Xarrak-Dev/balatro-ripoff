@@ -19,7 +19,9 @@ func generateStandardDeck() -> Array:
 	return deck
 
 func popRandomCard(deck:Array) -> Dictionary:
-	return deck.pop_at(randi_range(0, deck.size()))
+	if deck.size() > 0:
+		return deck.pop_at(randi_range(0, deck.size() - 1))
+	return {"rank":0, "suit":"error"}
 
 func setupCardNode(cardObject:Node2D, drawnCard:Dictionary, position:Vector2) -> Node2D:
 	cardObject.rank = drawnCard.rank

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://3bf74bj8hb13"]
+[gd_scene load_steps=4 format=3 uid="uid://3bf74bj8hb13"]
 
 [ext_resource type="Script" path="res://test_scene.gd" id="1_v41jb"]
+[ext_resource type="Script" path="res://hand.gd" id="2_gpnvt"]
+[ext_resource type="PackedScene" uid="uid://ho3xw27mps0d" path="res://cardScene.tscn" id="2_um7e5"]
 
 [node name="testScene" type="Node2D"]
 script = ExtResource("1_v41jb")
@@ -11,5 +13,11 @@ offset_top = 238.0
 offset_right = 581.0
 offset_bottom = 270.0
 text = "new card"
+
+[node name="Hand" type="Node2D" parent="."]
+script = ExtResource("2_gpnvt")
+
+[node name="cardScene" parent="." instance=ExtResource("2_um7e5")]
+position = Vector2(221, 274)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
