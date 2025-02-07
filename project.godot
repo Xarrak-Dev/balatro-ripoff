@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="balatro clone"
+config/name="balatro ripoff"
 run/main_scene="res://test_scene.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -19,8 +19,5 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+window/size/resizable=false
+window/size/borderless=true
